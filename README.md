@@ -1,40 +1,42 @@
-openapi: 3.1.0
-info:
-  version: 1.0.0
-  title: Simple Petstore
-  description: This is a slimmed down single path version of the Petstore definition.
-servers:
-  - url: https://httpbin.org
-paths:
-  '/pet/{id}':
-    parameters:
-      - name: id
-        in: path
-        required: true
-        schema:
-          type: integer
-    put:
-      tags:
-        - pet
-      summary: Update a pet
-      description: This operation will update a pet in the database.
-      responses:
-        '400':
-          description: Invalid id value
-      security:
-        - apiKey: []
-    get:
-      tags:
-        - pet
-      summary: Find a pet
-      description: This operation will find a pet in the database.
-      responses:
-        '480':
-          description: Invalid status value
-      security: []
-components:
-  securitySchemes:
-    apiKey:
-      type: apiKey
-      in: header
-      name: X-API-KEY
+[
+"openapi: 3.1.0",
+"info:",
+  "version: 1.0.0",
+  "title: Simple Petstore",
+  "description: This is a slimmed down single path version of the Petstore definition.",
+"servers:",
+  -0, "url: https:",
+"paths:",
+  "/pet/{id}",":",
+    "parameters:",
+      -0, "name: id",
+        "in: path",
+        "required: true",
+        "schema:",
+          "type: integer",
+    "put:",
+      "tags:",
+        -0, "pet",
+      "summary: Update a pet",
+      "description: This operation will update a pet in the database.",
+      "responses:",
+        "400",":",
+          "description: Invalid id value",
+      "security:",
+        -0, "apiKey:", [],
+    "get:",
+      "tags:",
+        -0, "pet",
+      "summary: Find a pet",
+      "description: This operation will find a pet in the database.",
+      "responses:",
+        "480",":",
+          "description: Invalid status value",
+      "security:", [],
+"components:",
+  "securitySchemes:",
+    "apiKey:",
+      "type: apiKey",
+      "in: header",
+      "name: X-API-KEY"
+]
